@@ -1,0 +1,295 @@
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7ba4b0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* App Component */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+.app {
+  background-color: aliceblue;
+  border: 3px solid #333;
+  border-radius: 8px;
+  padding: 18px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Component */
+h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.create {
+  margin: 10px;
+}
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border: 2px solid black;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+th,
+td {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+th {
+  background-color: #002626d8;
+  color: white;
+  font-size: 16px;
+}
+td {
+  color: #000;
+  font-size: 14px;
+}
+.action {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+button {
+  background: #eee;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button:hover {
+  background: #ddd;
+}
+button:focus {
+  outline: 2px solid #333;
+}
+
+/* UserForm Component */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 18px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 18px;
+}
+.form-group input:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: 2px solid #4caf50; /* Added border */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #3e8e41;
+  border-color: #3e8e41;
+}
+
+/* Back Component */
+.back {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.backArrow {
+  width: 100px;
+}
+
+/* LoadingSpinner Component */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 50vh;
+  margin: 2rem;
+}
+.spinner {
+  color: #000;
+  padding: 5rem;
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(255, 255, 255, 0.31);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  /* Spinner Animation */
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+
+  .form-container {
+    width: 80%;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .app {
+    padding: 15px;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  .form-group input {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  button {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+  }
+
+  table th,
+  table td {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 18px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+
+  .action {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
